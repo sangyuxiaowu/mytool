@@ -10,9 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CCWin;
+
 namespace 综合工具箱
 {
-    public partial class Main : Form
+    public partial class Main : CCSkinMain
     {
         public Main()
         {
