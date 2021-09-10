@@ -29,6 +29,7 @@ namespace 综合工具箱
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.extList = new System.Windows.Forms.CheckedListBox();
@@ -57,8 +58,6 @@ namespace 综合工具箱
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.renameDirSel = new System.Windows.Forms.FolderBrowserDialog();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -66,7 +65,6 @@ namespace 综合工具箱
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -76,10 +74,11 @@ namespace 综合工具箱
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(4, 31);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(508, 220);
+            this.tabControl1.Size = new System.Drawing.Size(508, 241);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -97,7 +96,7 @@ namespace 综合工具箱
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(500, 194);
+            this.tabPage1.Size = new System.Drawing.Size(500, 215);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "重命名";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -223,7 +222,7 @@ namespace 综合工具箱
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(500, 194);
+            this.tabPage2.Size = new System.Drawing.Size(500, 215);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "文件Base64";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -236,7 +235,7 @@ namespace 综合工具箱
             this.txtBase64.Multiline = true;
             this.txtBase64.Name = "txtBase64";
             this.txtBase64.ReadOnly = true;
-            this.txtBase64.Size = new System.Drawing.Size(494, 188);
+            this.txtBase64.Size = new System.Drawing.Size(494, 209);
             this.txtBase64.TabIndex = 0;
             this.txtBase64.Click += new System.EventHandler(this.txtBase64_Click);
             this.txtBase64.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtBase64_DragDrop);
@@ -248,7 +247,7 @@ namespace 综合工具箱
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(500, 194);
+            this.tabPage3.Size = new System.Drawing.Size(500, 215);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "图片元数据";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -261,7 +260,7 @@ namespace 综合工具箱
             this.txtExif.Multiline = true;
             this.txtExif.Name = "txtExif";
             this.txtExif.ReadOnly = true;
-            this.txtExif.Size = new System.Drawing.Size(494, 188);
+            this.txtExif.Size = new System.Drawing.Size(494, 209);
             this.txtExif.TabIndex = 1;
             this.txtExif.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtExif_DragDrop);
             this.txtExif.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtbox_DragEnter);
@@ -281,7 +280,7 @@ namespace 综合工具箱
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(500, 194);
+            this.tabPage4.Size = new System.Drawing.Size(500, 215);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "标记图片旋转";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -375,7 +374,7 @@ namespace 综合工具箱
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(500, 194);
+            this.tabPage5.Size = new System.Drawing.Size(500, 215);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "截图和取色";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -384,31 +383,17 @@ namespace 综合工具箱
             // 
             this.renameDirSel.Description = "请选择文件夹";
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(4, 254);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(516, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(32, 17);
-            this.toolStripStatusLabel.Text = "就绪";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 280);
-            this.Controls.Add(this.statusStrip1);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(508, 241);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(524, 280);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(524, 280);
             this.Name = "Main";
             this.Text = "工具箱";
@@ -423,10 +408,7 @@ namespace 综合工具箱
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -447,8 +429,6 @@ namespace 综合工具箱
         private System.Windows.Forms.CheckedListBox extList;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBase64;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.TextBox txtExif;

@@ -14,7 +14,7 @@ using CCWin;
 
 namespace 综合工具箱
 {
-    public partial class Main : CCSkinMain
+    public partial class Main : Form
     {
         public Main()
         {
@@ -99,7 +99,7 @@ namespace 综合工具箱
             if (File.Exists(file)){
                 FileInfo finfo = new FileInfo(file);
                 if (finfo.Length > 204800) {
-                    toolStripStatusLabel.Text = "文件大于200k ，大小为 "+ finfo.Length.ToString();
+                    txtBase64.Text = "文件大于200k ，大小为 " + finfo.Length.ToString();
                     return;
                 }
                 //2177747 2.07mb
@@ -115,7 +115,7 @@ namespace 综合工具箱
                 }
                 catch (Exception ex)
                 {
-                    toolStripStatusLabel.Text = ex.Message;
+                    txtBase64.Text = ex.Message;
                     MessageBox.Show(ex.Message);
                 }
             }
