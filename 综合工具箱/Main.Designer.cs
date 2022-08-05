@@ -56,7 +56,6 @@ namespace 综合工具箱
             this.label6 = new System.Windows.Forms.Label();
             this.textXZImg = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.renameDirSel = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
@@ -73,7 +72,6 @@ namespace 综合工具箱
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -125,11 +123,13 @@ namespace 综合工具箱
             ".MP3",
             ".AVI",
             ".FLV",
-            ".ZIP"});
-            this.extList.Location = new System.Drawing.Point(65, 91);
+            ".ZIP",
+            ".XML",
+            ".JSON"});
+            this.extList.Location = new System.Drawing.Point(65, 87);
             this.extList.MultiColumn = true;
             this.extList.Name = "extList";
-            this.extList.Size = new System.Drawing.Size(293, 84);
+            this.extList.Size = new System.Drawing.Size(416, 116);
             this.extList.TabIndex = 10;
             this.extList.SelectedIndexChanged += new System.EventHandler(this.extList_SelectedIndexChanged);
             // 
@@ -144,9 +144,9 @@ namespace 综合工具箱
             // 
             // btnRename
             // 
-            this.btnRename.Location = new System.Drawing.Point(378, 117);
+            this.btnRename.Location = new System.Drawing.Point(398, 46);
             this.btnRename.Name = "btnRename";
-            this.btnRename.Size = new System.Drawing.Size(93, 58);
+            this.btnRename.Size = new System.Drawing.Size(83, 23);
             this.btnRename.TabIndex = 8;
             this.btnRename.Text = "进行重命名";
             this.btnRename.UseVisualStyleBackColor = true;
@@ -191,9 +191,9 @@ namespace 综合工具箱
             // 
             // btnSel
             // 
-            this.btnSel.Location = new System.Drawing.Point(378, 10);
+            this.btnSel.Location = new System.Drawing.Point(398, 10);
             this.btnSel.Name = "btnSel";
-            this.btnSel.Size = new System.Drawing.Size(93, 23);
+            this.btnSel.Size = new System.Drawing.Size(83, 23);
             this.btnSel.TabIndex = 2;
             this.btnSel.Text = "选择文件夹";
             this.btnSel.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@ namespace 综合工具箱
             this.txtDir.Location = new System.Drawing.Point(65, 12);
             this.txtDir.Name = "txtDir";
             this.txtDir.ReadOnly = true;
-            this.txtDir.Size = new System.Drawing.Size(293, 21);
+            this.txtDir.Size = new System.Drawing.Size(307, 21);
             this.txtDir.TabIndex = 1;
             // 
             // label1
@@ -369,16 +369,6 @@ namespace 综合工具箱
             this.label5.TabIndex = 2;
             this.label5.Text = "图片文件夹";
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(500, 215);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "截图和取色";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
             // renameDirSel
             // 
             this.renameDirSel.Description = "请选择文件夹";
@@ -442,7 +432,6 @@ namespace 综合工具箱
         private System.Windows.Forms.CheckBox checkXZJson;
         private System.Windows.Forms.Button btnXZSelJsonDIr;
         private System.Windows.Forms.Button btnXZSelDIr;
-        private System.Windows.Forms.TabPage tabPage5;
     }
 }
 

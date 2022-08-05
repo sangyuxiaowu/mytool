@@ -8,6 +8,16 @@ namespace 综合工具箱
         private System.Drawing.Bitmap _Image;
         private System.Text.Encoding _Encoding = System.Text.Encoding.UTF8;
 
+        /// <summary>
+        /// Utility class for working with EXIF data in images. Provides abstraction
+        /// for most common data and generic utilities for work with all other. 
+        /// 
+        /// Copyright (c) Michal A. Valášek - Altair Communications, 2003-2005
+        /// Copmany: http://software.altaircom.net, E-mail: support@altaircom.net
+        /// Private: http://www.rider.cz, E-mail: rider@rider.cz
+        /// This is free software licensed under GNU Lesser General Public License
+        /// 
+
         #region Type declarations
 
         // 
